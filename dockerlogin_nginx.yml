@@ -13,6 +13,6 @@
 
   - name: start container
     docker_container:
-      name: ans_petc
+      name: mynginxcontainer
       image: mayupdocker/mynginx:latest
       published_ports: 8080:80
