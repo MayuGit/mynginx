@@ -32,10 +32,11 @@ pipeline{
             }
         }
          
-        stage('ansible_git checkout') {
+        stage('ansible stages ahead') {
             steps {
                 script{
-                    git credentialsId: 'mayugit', url: 'https://github.com/MayuGit/mynginx.git'
+                    //git credentialsId: 'mayugit', url: 'https://github.com/MayuGit/mynginx.git'
+                     echo 'Ansible stages ahead!'
                 }
                 //ansiblePlaybook credentialsId: 'sshvagrant5', extras: "-e tag=23", installation: 'myansible', playbook: '/var/jenkins_home/playbooks/VagrantCreate.yml'
             }
