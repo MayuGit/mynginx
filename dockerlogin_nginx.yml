@@ -9,10 +9,10 @@
   - name: pull image from dockerhub
     docker_image:
       name: mayupdocker/mynginx
-      tag: latest
+      tag: {{tag}}
 
   - name: start container
     docker_container:
       name: mynginxcontainer
-      image: mayupdocker/mynginx:latest
+      image: mayupdocker/mynginx:{{tag}}
       published_ports: 8080:80
