@@ -6,13 +6,13 @@
       password: mayuresh11
       email: vicky.pardeshi@gmail.com
 
-  - name: pull image from dockerhub
-    docker_image:
-      name: mayupdocker/mynginx
-      tag: {{tag}}
+  #- name: pull image from dockerhub
+  #  docker_image:
+  #    name: mayupdocker/mynginx
+  #    tag: {{ tag }}
 
   - name: start container
     docker_container:
       name: mynginxcontainer
-      image: mayupdocker/mynginx:{{tag}}
+      image: mayupdocker/mynginx:{{ tag }}
       published_ports: 8080:80
