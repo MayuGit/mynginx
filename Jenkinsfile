@@ -46,7 +46,7 @@ pipeline{
                //script{
                //    sh 'cp /var/jenkins_home/playbooks/dockercheck.yml ${WORKSPACE}/dockercheck.yml'
                //}
-                ansiblePlaybook credentialsId: 'sshvagrant5', installation: 'myansible', playbook: 'dockercheck.yml'
+                ansiblePlaybook credentialsId: 'sshvagrant5', installation: 'myansible', playbook: 'dockercheck_nginx.yml'
            }
         }
          
@@ -56,7 +56,7 @@ pipeline{
                //    sh 'cp /var/jenkins_home/playbooks/dockerlogin.yml ${WORKSPACE}/dockerlogin.yml'
                //}
                 //ansiblePlaybook credentialsId: 'sshvagrant5', extras: 'tag=${BUILD_NUMBER}', installation: 'myansible', playbook: '/var/jenkins_home/playbooks/dockerlogin.yml'
-                ansiblePlaybook credentialsId: 'sshvagrant5', extras: "-e tag=${BUILD_NUMBER}", installation: 'myansible', playbook: 'dockerlogin.yml'
+                ansiblePlaybook credentialsId: 'sshvagrant5', extras: "-e tag=${BUILD_NUMBER}", installation: 'myansible', playbook: 'dockerlogin_nginx.yml'
            }
         }
          
